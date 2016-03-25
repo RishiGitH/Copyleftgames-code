@@ -14,7 +14,7 @@ import os.path
 import random
 sys.path.append("data")
 import MyGame
-import pymouse, pykeyboard
+
  
 # Global constants
  
