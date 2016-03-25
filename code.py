@@ -1,6 +1,6 @@
-""" THis is just a collection of code written by me just as few key and reminder points . It is just a collection of code
- and not an actual game which can run . I have added a lot of classes but manymore will be there and note 
-that all these classes aren't supposed  to be in a same module . There will be different modulesmore data and 
+""" THis is just a mockup  of code written by me just as a layout and for few key points . It is just a collection of code
+ and not an actual game which can run . I have added a lot of classes but many more will be there and note 
+that all these classes aren't supposed  to be in a same module .  There will be different modules more data and 
  a lot of more work . This is what  i could code in the time I had . There could be a lot of small silly mistakes do 
  comment on them so i can get rid of them as soon as possible :) """ 
 
@@ -38,8 +38,7 @@ class Player(object):
         # Call the parent's constructor
         super().__init__()
  
-        # Create an image of the block, and fill it with a color.
-        # This could also be an image loaded from the disk.
+        # Creates a texture for the class
         width = 40
         height = 60
          #New class to be implementd or changes to be figured out
@@ -146,8 +145,8 @@ class Enemy(PLayer) :
              .quit 
              
              
-    # note this .soy Importer :- The .soy format is intended to be used within Python with the standard import command. To achieve this PySoy 		adds its importer to sys.path_hooks on initialization. This hook applies to any path added after import soy. 
-    # also use this  for  Objects of this class can be populated by PySoy objects and exports them to a file when called. Example usage:
+    # note :- .soy Importer :- The .soy format is intended to be used within Python with the standard import command. To achieve this PySoy 		adds its importer to sys.path_hooks on initialization. This hook applies to any path added after import soy. 
+    # also use .soy Exporter  for  Objects of this class can be populated by PySoy objects and exports them to a file when called. Example usage:
 
 	# export = soy.Exporter()
 	# export.mainwindow = soy.widgets.Window('My Game')
@@ -192,6 +191,7 @@ class Level(object):
  
         # SPrite in the background
         screen.fill(BLUE)
+    # Everything managing sound goes here 
 class Sound(object):
     """Handles all sound for the game"""
     def __init__(self, overhead_info):
