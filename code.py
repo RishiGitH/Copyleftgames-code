@@ -1,12 +1,8 @@
-""" THis is just a collection of code written by me just
-	 as few key and reminder points . It is just a collection of code
-	  and not an actual game which can run . 
-	I have added a lot of classes but many
- 	more will be there and note that all these classes aren't supposed 
- 	to be in a same module . There will be different modulesmore data and 
- 	a lot of more work . This is what  i could code in the time I had . 
- 	There could be a lot of small silly mistakes do 
- 	comment on them so i can get rid of them as soon as possible :) """ 
+""" THis is just a collection of code written by me just as few key and reminder points . It is just a collection of code
+ and not an actual game which can run . I have added a lot of classes but manymore will be there and note 
+that all these classes aren't supposed  to be in a same module . There will be different modulesmore data and 
+ a lot of more work . This is what  i could code in the time I had . There could be a lot of small silly mistakes do 
+ comment on them so i can get rid of them as soon as possible :) """ 
 
 
 
