@@ -272,6 +272,7 @@ Material.C
 soy.scenes._world  [ a single world for all scenes]
 sce.gravity = (0,0,0)
 sce.friction = 1
+
 Client. Client [to manage window creation, define context and data state of the object e.t.c. ]
  soy.scenes.Scene.collide_glslf
  _soy.Client_object [ to create client instances locally]
@@ -283,6 +284,7 @@ Client. Client [to manage window creation, define context and data state of the 
 <Color (233, 150, 122, 255)>\n"
 >>> c.red\n"
 233\n"
+
 soy.Client Type
 PySoy clients manage the state of a specific game instance including
 windows, audio input/output, controllers, and object data state.
@@ -295,6 +297,7 @@ though they may be used for playing downloaded games or local 3D access
 Due to differing hardware, some properties (position, size, title, etc)
  may be read-only for some clients where these values cannot be changed.
   An exception will be raised when a Client property cannot be changed.
+  
 Camera([position, radius]
 
 A camera is an invisible object in 3d space through which the scene can
@@ -333,7 +336,6 @@ Box shaped body.
  <Box>
 
 py:class:: Projector(camera)
-
 Instances of this class are used to project, as if to a movie screen,
  the output of a soy.bodies.Camera to a 2d area of a Window.
  The camera property can be changed at any time to switch the rendering
