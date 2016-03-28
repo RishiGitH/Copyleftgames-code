@@ -319,13 +319,14 @@ Like other bodies, Camera can also have physics applied to it; such as velocity.
 Unlike other bodies, however, Camera do not effect other bodies whenthey collide.
 The position of the camera will specify where the scene will be viewed
  from.The X,Y,Z position of the camera  soy.atoms.Position
- py:class:: Portal
 
+class called soy.bodies.Portal 
 "Portal is a portal body.
 "Portal has target property for the corresponding portal.
 "Example:
 scene = soy.scenes.Scene()
 portal = soy.bodies.Portal()
+Portals are intended to connect to one other portal and allow bodies to move between them.
 
 
 py:class:: LandscapeBody([position, size, material]) 
