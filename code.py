@@ -261,7 +261,7 @@ class Checkpoint(soy.textures.Textures):
         
         
         
-# Just some notes for things that might be needed
+# Just some  Important notes for things that might be needed in future
 """ 
 #include<pysoy.h>  [Class PROP]
 #include<pysoy-utils.h> [_soyGeneratorClass]
@@ -269,8 +269,82 @@ module - SImplex2d.c
 Action.c
 WIndow.C
 Material.C
+soy.scenes._world  [ a single world for all scenes]
+sce.gravity = (0,0,0)
+sce.friction = 1
+Client. Client [to manage window creation, define context and data state of the object e.t.c. ]
+ soy.scenes.Scene.collide_glslf
+ _soy.Client_object [ to create client instances locally]
+  p = soy.atoms.Position((10, 10, 0))
+  a = soy.atoms.Area((10, 10, 20, 0))
+  a = soy.atoms.Axis((10, 10, 0)) 
+  >>> c = soy.atoms.Color('darksalmon')\n"
+>>> c\n"
+<Color (233, 150, 122, 255)>\n"
+>>> c.red\n"
+233\n"
+soy.Client Type
+PySoy clients manage the state of a specific game instance including
+windows, audio input/output, controllers, and object data state.
+Instances of this type represent PySoy clients, either local or remote.
+Local clients are created by instantating a new soy.Client object and\n"
+adding it to a Server. 
+Local clients are intended primarily for developing and debugging games
+though they may be used for playing downloaded games or local 3D access
+ for server administrators.
+Due to differing hardware, some properties (position, size, title, etc)
+ may be read-only for some clients where these values cannot be changed.
+  An exception will be raised when a Client property cannot be changed.
+Camera([position, radius]
+
+A camera is an invisible object in 3d space through which the scene can
+  be rendered.  It must be attached to a :class:`soy.widgets.Projector`
+  or other rendering class to be activated::
+>>> room = soy.scenes.Room(3.0)  -  [this line creates a scene called room.]
+>>> room['cam'] = soy.bodies.Camera() [This line creates a Camera inside the scene called cam]
+>>> client = soy.Client() [This line creates a local Client called client.]
+>>> client.window.append(soy.widgets.Projector(room['cam'])) [This line creates a Projector that projects the image from cam on
+to the window of the client.
+ To project an image with a Projector, you need to append it to a Widget
+such as a window to project it on, and a Camera.
+A camera can be used by multiple output objects at the same time.
+You can move the Camera like any other body.
+ For example:
+room['cam'].position.z = 15
+This moves the Camera's coordinate z to 15
+Like other bodies, Camera can also have physics applied to it; such as velocity.
+Unlike other bodies, however, Camera do not effect other bodies whenthey collide.
+The position of the camera will specify where the scene will be viewed
+ from.The X,Y,Z position of the camera  soy.atoms.Position
+ py:class:: Portal
+
+"Portal is a portal body.
+"Portal has target property for the corresponding portal.
+"Example:
+scene = soy.scenes.Scene()
+portal = soy.bodies.Portal()
+
+
+py:class:: LandscapeBody([position, size, material]) 
+Box shaped body.
+ Example::
+ >>> b = soy.bodies.LandscapeBody(position=(0.0, 1.0, 8.0), size=(3.0, 2.4, 1.6), material = soy.materials.Colored())
+>>> b
+ <Box>
+
+py:class:: Projector(camera)
+
+Instances of this class are used to project, as if to a movie screen,
+ the output of a soy.bodies.Camera to a 2d area of a Window.
+ The camera property can be changed at any time to switch the rendering
+perspective to a different position.  Setting the camera property to
+None disables rendering.
+
+
 
 """"
+
+
 
 def main():
     """ Main Program """
